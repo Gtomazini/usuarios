@@ -59,7 +59,7 @@ def teste():
 # Criar o usuario
 #
 #Adiciona um usuario no banco de dados
-@usersRoute.rout('/api/usuarios/add', methods=['POST'])
+@usersRoute.route('/api/usuarios/add', methods=['POST'])
 @Auth.token_required
 def add_usuarios(usuario_id, primeiro_nome, sobrenome, email):
     try:
@@ -75,7 +75,7 @@ def add_usuarios(usuario_id, primeiro_nome, sobrenome, email):
 
 #Atualiza o usuario
 #
-@usersRoute.rout('/api/usuarios/update/<int:usuario_id', methods=['PUT'])
+@usersRoute.route('/api/usuarios/update/<int:usuario_id>', methods=['PUT'])
 @Auth.token_required
 def update_usuarios(usuario_id: int, username, primeiro_nome, sobrenome, email):
     try:

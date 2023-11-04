@@ -172,7 +172,7 @@ class Usuario (Base):
             # tratamento de erro desconhecido
             return Exception('Erro desconhecido') 
 
-    def add_usuarios(usuario_id, primeiro_nome, sobrenome, email):
+    def add_usuarios(int: usuario_id, primeiro_nome, sobrenome, email):
         try:
             # Verifica se o usuário pode adicionar um novo usuario usuário
             acesso_liberado = Permissao.valida_permissao_usuario(usuario_id, 'Pode_Adicionar_Usuarios')
